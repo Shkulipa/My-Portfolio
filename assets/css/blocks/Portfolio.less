@@ -1,0 +1,520 @@
+// main: ../style.less
+.Portfolio {
+  display: none;
+  overflow-x: hidden;
+  position: relative; 
+
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.Portfolio__close {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 1;
+  opacity: .5;
+
+  transition: .2s linear;
+
+  &:hover {
+    opacity: .8;
+    transform: scale(1.1);
+  }
+}
+
+// Portfolio__Left(left Side) =======================
+// ==========================================================
+
+.Portfolio__left {
+  position: fixed;
+  
+  width: 40%;
+  height: 100vh;
+  background: #1a1b23;
+}
+
+.Portfolio__left h1 {
+    position: relative;
+    color: @white;
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    
+  
+    top:65%;
+    margin-left: 10%;
+  
+    & span {
+      color: @pink;
+    }
+}
+
+.Portfolio__left h1::after{
+  position: absolute;
+
+  content: "";
+  display: block;
+  left: 0;
+  height: 10px;
+  width: 85%;
+  max-width: 70%;
+  background-color: @pink;
+}
+
+// Portfolio__Right(Right Side) =======================
+// ==========================================================
+.Portfolio__right {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  background-color: @black;
+}
+
+// Portfolio__Right .Portfolio__Portfolio (Right Side)  =======================
+// ==========================================================
+.Portfolio__Portfolio {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 7px solid @black;
+  border-bottom: 7px solid @black;
+  padding: 5rem 3rem;
+  padding-bottom: 5rem;
+  background-color: @white;
+
+  & h1 {
+    color: @black;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+}
+
+.Portfolio__filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+  margin-bottom: 30px;
+
+  div {
+    margin: 0 5px;
+    padding: 0.7rem 2rem;
+    color: @pink;
+    border: 2px solid @pink;
+    border-radius: 4px;
+    background-color: @white;
+    transition: .2s linear;
+
+    &:hover {
+      transition: .2s linear;
+      transform: scale(1.1);
+      border: 2px solid transparent;
+      color: @white;
+      background-color: @pink;
+      cursor: pointer;
+    }
+  }
+}
+
+.Portfolio__items {
+  width: 100%;
+  height: auto;
+
+  text-align: center;
+}
+
+
+.Portfolio__items__block {
+  display: inline-block;
+  width: 32%;
+  overflow: hidden;
+  padding: 15px 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0);
+
+  transition: .2s linear;
+
+  & img {
+    position: relative;
+    transition: .2s linear;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+
+  &:hover {
+    transition: .2s linear;
+    transform: scale(1.1);
+  }
+
+  &:hover img {
+    transition: .2s linear;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    opacity: .2;
+  }
+
+}
+
+.Portfolio__items__block__content {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+
+  transition: .2s linear;
+
+  & a {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 3px solid @pink;
+    color: @pink;
+    background: @white;
+    width: 60px;
+    height: 60px;
+    margin: 0 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    font-size: 2rem;
+    transition: .2s linear;
+
+    &:hover {
+      transform: scale(1.2);
+      transition: .2s linear;
+      color: @white;
+      background: @pink;
+    }
+  }
+}
+
+.Portfolio__items__block:hover .Portfolio__items__block__content  {
+  transition: .2s linear;
+  display: flex;
+  opacity: 1;
+}
+
+// Portfolio__Reviews =======================
+// ==========================================================
+.Portfolio__Reviews {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 7px solid @black;
+  padding: 5rem 4rem;
+  padding-bottom: 5rem;
+  background-color: @pink;
+  text-align: center;
+
+  & h1 {
+    color: @white;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+}
+
+.Portfolio__Reviews__block {
+  outline: none;
+
+  & p {
+    padding: 0 10px;
+    font-style: italic;
+  }
+}
+
+//Portfolio__Reviews Slider ========================
+.Portfolio__Reviews__Slider {
+  position: relative;
+  width: 100%;
+  padding: 0 30px;
+
+  & .slick-arrow {
+    font-size: 0;
+    border: none;
+  }
+
+  & .slick-prev {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border-top: 4px solid @white;
+    border-left: 4px solid @white;
+    transform: rotate(-45deg);
+
+    &:hover {
+      transform: scale(1.1);
+      transform: rotate(-45deg);
+    }
+
+    &:focus {
+      outline: none;
+      transform: scale(1.1);
+      transform: rotate(-45deg);
+    }
+  }
+
+  & .slick-next {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border-top: 4px solid @white;
+    border-left: 4px solid @white;
+    transform: rotate(135deg);
+
+    &:hover {
+      transform: scale(1.1);
+      transform: rotate(135deg);
+    }
+    &:focus {
+      outline: none;
+      transform: scale(1.1);
+      transform: rotate(135deg);
+    }
+  }
+
+  & .slick-dots {
+    list-style-type: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    & .slick-active button {
+        font-size: 0;
+        background:@white;
+        border-radius: 50%;
+        padding: 0;
+        width: 10px;
+        height: 10px;
+        border: 2px solid @white;
+
+        &:focus {
+          outline: none;
+          transform: scale(1.2);
+        }
+    }
+
+    & button {
+      margin: 0 5px;
+      font-size: 0;
+      background: none;
+      border-radius: 50%;
+      padding: 0;
+      width: 10px;
+      height: 10px;
+      border: 2px solid @white;
+
+      &:focus {
+        outline: none;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+  display: flex;
+  align-items: center;
+}
+
+// Portfolio__Statistic ================================================================
+.Portfolio__Statistic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 7px solid @black;
+
+  padding: 2rem 2rem;
+  background: @white;
+  color: @black;
+
+}
+
+.Portfolio__Statistic__block {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+
+  & h2 {
+    text-transform: uppercase;
+  }
+
+  & h1 {
+    font-size: 3rem;
+  }
+}
+
+
+
+//Notebook(max-width: 1199px)==============================================
+//=========================================================================
+@media @notebook {
+  .Portfolio__left h1 {
+    font-size: 3.8rem;
+  }
+
+  .Portfolio__Portfolio {
+    padding: 2rem 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .Portfolio__items__block__content a {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+  }
+
+  .Portfolio__Reviews {
+    padding: 2rem 3rem;
+    padding-bottom: 2rem;
+  }
+}
+
+//Notebook(max-width: 991px)==============================================
+//=========================================================================
+@media @tablet {
+  .Portfolio__left h1 {
+    font-size: 2.8rem;
+  }
+
+  .Portfolio__items__block {
+    width: 45%;
+  }
+
+  .Portfolio__items__block__content {
+    & a {
+      width: 50px;
+      height: 50px;
+      margin: 0 10px;
+    }
+  }
+
+  .Portfolio__Reviews h1 {
+    margin-bottom: 20px;
+  }
+}
+
+//Mobile(max-width: 767px)==============================================
+//=========================================================================
+@media @mobile {
+  .Portfolio {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .Portfolio__left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    max-height: 100%;
+    background: #1a1b23;
+  }
+
+  .Portfolio__right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .Portfolio__left h1 {
+    top: 0;
+  }
+
+  .Portfolio__left h1::after {
+    width: 120%;
+    max-width: 120%;
+  }
+
+  .Portfolio__items__block__content a {
+    width: 75px;
+    height: 75px;
+    margin: 0 20px;
+    font-size: 2.5rem;
+  }
+}
+
+//Mobile-sm(max-width: 565px)==============================================
+//=========================================================================
+@media @mobile-sm {
+  .Portfolio h1 {
+    font-size: 2.5rem;
+  }
+
+  .Portfolio__left h1::after {
+    height: 7px;
+  }
+
+  .Portfolio__left {
+    height: 95px;
+  }
+
+  .Portfolio__Portfolio h1 {
+    font-size: 1.5rem;
+  }
+
+
+  .Portfolio__filters div {
+    padding: .5rem 1rem;
+  }
+
+  .Portfolio__items__block {
+    width: 49%;
+    padding: 10px 5px;
+  }
+
+  .Portfolio__items__block__content a {
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+    font-size: 1.5rem;
+  }
+
+  .Portfolio h1 {
+    font-size: 1.5rem;
+  }
+
+  .Portfolio__Reviews {
+    padding: 1rem .7rem;
+    padding-bottom: 1rem;
+  }
+
+  .Portfolio .Copyright {
+    flex-direction: column;
+
+    & a {
+      margin-bottom: 10px;
+    }
+  } 
+}

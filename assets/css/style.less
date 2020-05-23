@@ -1,0 +1,43 @@
+ // out: style.css, compress: true
+
+ @import "vars.less"; 
+
+ html {
+   font-size: 15px;
+ }
+
+ body {
+   margin: 0;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1rem;
+   color: @white;
+ }
+
+
+ h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+ }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+//Vendor
+@import "Vendor/slick.less";
+
+// Helpers
+@import "Helpers.less";
+
+// Blocks
+@import "blocks/Homepage.less";
+@import "blocks/Container.less";
+@import "blocks/Resume.less";
+@import "blocks/Copyright.less";
+@import "blocks/Portfolio.less";
+@import "blocks/Contact.less";
+
+// Modificators
+@import "Modificators.less";
+
