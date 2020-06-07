@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
    <!-- HomePage  =================================================== -->
     <section class="Homepage">
       <div class = "Homepage__left__side">
@@ -28,7 +29,7 @@
 
               <div class="social">
                 <a target="_blank" href="https://www.linkedin.com/in/alexey-shkulipa-541557144">
-                  <img src="assets/images/Linkedin.svg" width="24" alt="">
+                  <img src="assets/images/LinkedIn.svg" width="24" alt="">
                 </a>
                 <a target="_blank" href="https://www.facebook.com/A.Shkulipa/">
                   <img src="assets/images/facebook.svg" width="24" alt="">
@@ -62,7 +63,7 @@
 
         <div class="Homepage__right__side__content">
           <div class="Homepage__right__sidetitle">re<span>s</span>ume</div>
-          <div class="Homepage__right__sidesubtitle">Something about me experience and skills</div>
+          <div class="Homepage__right__sidesubtitle">Something about my experience and skills</div>
           </div>
         </div>
         <!-- /Resume =====================================================-->
@@ -76,7 +77,7 @@
           </div>
           <div class="Homepage__right__side__content">
             <div class="Homepage__right__sidetitle">port<span>f</span>olio</div>
-            <div class="Homepage__right__sidesubtitle">Have a spoon of my work</div>
+            <div class="Homepage__right__sidesubtitle">Have a look at my works</div>
           </div>  
         </div>
         <!-- /Portfolio =====================================================-->
@@ -90,7 +91,7 @@
           </div>
           <div class="Homepage__right__side__content">
             <div class="Homepage__right__sidetitle">co<span>n</span>tact</div>
-            <div class="Homepage__right__sidesubtitle">Sey hello or find me</div>
+            <div class="Homepage__right__sidesubtitle">Say hello or find me</div>
           </div>  
         </div>
          <!-- /Contact =====================================================-->
@@ -100,7 +101,8 @@
     </section>
   <!-- /HomePage  =================================================== --> 
 
-  <!-- Resume  =================================================== -->
+
+  <!-- Resume  ===================================================== -->
   <!-- =============================================================  -->
     <section class="Resume">
         <div class="Resume__close" id="close">
@@ -114,7 +116,7 @@
         </div>
       
 
-      <div  class="Resume__right">
+      <div  class="Resume__right" id="resume__right">
 
         <!-- Resume__skills =====================================-->
         <div  class="Resume__skills">
@@ -166,7 +168,7 @@
 
         </div ><!-- /Resume__skills =====================================-->
 
-        <!-- Resume__certificates =====================================-->
+        <!-- Resume__certificates ======================================== -->
         <div  class="Resume__Certificates">
             <h1>Certificates</h1>
   
@@ -212,9 +214,9 @@
 
             </div>
 
-        </div ><!-- /Resume__certificates =====================================-->
+        </div ><!-- /Resume__certificates ================================ -->
         
-        <!-- Resume__right__Education =====================================-->
+        <!-- Resume__right__Education ==================================== -->
         <div  class="Resume__right__Education">
           <h1>Education</h1>
 
@@ -234,9 +236,9 @@
               <p>Faculty of Electronics and Information Technology, specialty "Electronic devices and devices."</p>
             </div>
 
-        </div >  <!-- /Resume__right__Education ===================================== -->
+        </div >  <!-- /Resume__right__Education ========================== -->
 
-        <!-- Resume__language ===================================== -->
+        <!-- Resume__language ============================================ -->
         <div class="Resume__language">
           <h1>Languages spoken</h1>
 
@@ -276,20 +278,21 @@
 
         </div><!-- /Resume__language ===================================== -->
 
+
         <!-- Copyright ===================================== -->
         <div class="Copyright">
-          <a href="#" class="Copyright__Name">Alexey Shkulipa</a>
+          <a id="close" href="#" class="Copyright__Name">Alexey Shkulipa</a>
           <div class="Copyright__content">Copyright &copy; 2020 All right reserved</div>
         </div><!-- /Copyright ===================================== -->
 
       </div> <!-- /Resume__right  =====================================-->
     </section >
-  <!-- /Resume  =================================================== -->
+  <!-- /Resume  ==================================================== -->
   <!-- =============================================================  --> 
   
   
 <!-- Portfolio =================================================== -->
-  <!-- =============================================================  --> 
+<!-- ============================================================  --> 
   <section class="Portfolio">
     <div class="Portfolio__close" id="close">
       <img src="assets/images/close.svg" width="24" alt="">
@@ -340,7 +343,7 @@
             </div>
           </div>
           <div class="Portfolio__items__block" data-cat="Apps">
-            <img src="assets/images/websites/See__battle.png" alt="">
+            <img src="assets/images/websites/See__Battle.png" alt="">
             <div class="Portfolio__items__block__content">
               <a href="https://github.com/Shkulipa/See__Battle" target="_blank"><i class="fab fa-github"></i></a>
               <a href="https://shkulipa.github.io/See__Battle" target="_blank"><i class="fas fa-link"></i></a>
@@ -377,7 +380,7 @@
 
       <!-- Copyright ===================================== -->
       <div class="Copyright">
-        <a href="#" class="Copyright__Name">Alexey Shkulipa</a>
+        <a id="close" href="#" class="Copyright__Name">Alexey Shkulipa</a>
         <div class="Copyright__content">Copyright &copy; 2020 All right reserved</div>
       </div><!-- /Copyright ===================================== -->
       
@@ -393,7 +396,7 @@
 
 
   <!-- Contact  =================================================== -->
-  <!-- =============================================================  -->  
+  <!-- ===========================================================  -->  
     <section class="Contact">
       <div class="Contact__close" id="close">
         <img src="assets/images/close.svg" width="24" alt="">
@@ -406,27 +409,25 @@
       <div class="Contact__right">
 
         <!-- Contact__SeyHello ===================================== -->
-        <!-- <div class="Contact__SeyHello">
+        <div class="Contact__SeyHello">
           <h1>Sey Hello!</h1>
 
-          <form action="#">
+          <form method="post" action="contact.php">
             <div class="Contact__SeyHello__Name">
-              <input id="name" name="name" placeholder="Your name..." type="text">
+              <input id="Name" name="Name" placeholder="Your name..." type="text">
             </div>
             <div class="Contact__SeyHello__YourEmail">
-              <input id="name" name="Email" placeholder="Your Email..." type="text">
+              <input id="Email" name="Email" placeholder="Your Email..." type="text">
             </div>
             <div class="Contact__SeyHello__Message">
-              <textarea  id="message" name="message" placeholder="Your Message..." maxlength="1000"></textarea>
+              <textarea  id="Message" type="type" name="Message" placeholder="Your Message..." maxlength="1000"></textarea>
             </div>
 
-            <button class="Contact__SeyHello__SendButton">Send</button>
+            <button class="Contact__SeyHello__SendButton" type="submit" value="Contact">Send</button>
 
             <div class="Contact__SeyHello__Name__MessageSend">Success! Your message was sent.</div>
-            
-            
           </form>
-        </div> -->
+        </div>
         <!-- /Contact__SeyHello ===================================== -->
 
 
@@ -451,7 +452,7 @@
 
             <div class="Contact__Details__block">
               <a  target="_blank" href="Skype:Stronger0075?chat">
-                <img width="24" src="assets/images/Skype.svg" alt="">
+                <img width="24" src="assets/images/skype.svg" alt="">
                 <div class="Contact__Details__block__content">Skype</div>
               </a>
             </div>
@@ -496,7 +497,7 @@
 
         <!-- Copyright ===================================== -->
         <div class="Copyright">
-          <a href="#" class="Copyright__Name">Alexey Shkulipa</a>
+          <a id="close" href="#" class="Copyright__Name">Alexey Shkulipa</a>
           <div class="Copyright__content">Copyright &copy; 2020 All right reserved</div>
         </div><!-- /Copyright ===================================== -->
 
@@ -504,7 +505,8 @@
 
     </section>
   <!-- /Contact  =================================================== -->
-  <!-- =============================================================  -->
+  <!-- ============================================================  -->
+
 
 </body>
     
