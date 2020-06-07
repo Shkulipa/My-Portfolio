@@ -11,13 +11,25 @@
 
 <?php
 
-  $Name = $_POST['Name'];
-  $Email = $_POST['Email'];
-  $Message = $_POST['Message'];
 
-  echo 'Name : ' . $Name . '<br/>';
-  echo 'Email: ' . $Email . '<br/>';
-  echo 'Message: ' . $Message . '<br/>';
+$Name = $_POST['Name'];
+$Email = $_POST['Email'];
+$Message = $_POST['Message'];
+
+
+$msg = "Name: $Name.\n" .
+"Email: $Email\n" .
+"Message: $Message";
+
+$success = mail('oleksii.shkulipa@gmail.com', 'Contact', $msg,  'From:' . $Email);
+  if (!$success) {
+  $errorMessage = error_get_last()['message'];
+  }
+
+
+echo 'Name: ' . $Name . '<br />' . '<br />';
+echo 'Email: ' . $Email . '<br />' . '<br />';
+echo 'Message: ' . $Message;
 
 ?>
 
